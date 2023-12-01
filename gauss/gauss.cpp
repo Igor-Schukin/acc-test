@@ -9,6 +9,7 @@
 extern float gaussTest(const size_t n);
 
 const size_t DEFAULT_MATRIX_SIZE = 1000;
+const size_t MAX_MATRIX_SIZE = 47000;
 
 int main(int argc, char *argv[])
 {

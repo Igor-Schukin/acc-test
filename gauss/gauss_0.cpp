@@ -14,7 +14,7 @@ float gaussTest(const size_t n)
     TYPE* __restrict__ a = new TYPE[size];
     TYPE* __restrict__ c = new TYPE[size];
     TYPE* __restrict__ x = new TYPE[n];
-	
+
     //~~~ initial matrix
 	
     for(int i = 0; i < size; i++)
