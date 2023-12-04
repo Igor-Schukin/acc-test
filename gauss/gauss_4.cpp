@@ -9,7 +9,7 @@
 
 float gaussTest(const size_t n)
 {
-    TYPE err = 0;
+    double err = 0;
 
     const size_t size = n*(n+1);  // array size
 
@@ -20,75 +20,73 @@ float gaussTest(const size_t n)
     #pragma acc data create(a[0:size]) create(c[0:size]) create(x[0:n])
     {
 
-    //~~~ initial matrix
-	
-    #pragma acc parallel loop
-    for(int i = 0; i < size; i++)
-    {
-        a[i] = (TYPE)rand() / RAND_MAX * (MAX - MIN) + MIN;
-    }
-  	
-    //~~~ matrix copy for final test
-	
-    #pragma acc parallel loop
-    for(int i = 0; i < size; i++)
-    {
-        c[i] = a[i];
-    }
-	
-    //show(a);
-	
-    //~~~ transform matrix to triangular form
-	
-    #pragma acc parallel loop
-    for(int i = 0; i < n; i++)
-    {
-        #pragma acc loop
-        for(int j = i + 1; j < n; j++)
+        //~~~ initial matrix
+        
+        #pragma acc parallel loop
+        for(int i = 0; i < size; i++)
         {
-            TYPE ratio = a[ID(j,i)] / a[ID(i,i)];
+            a[i] = (TYPE)rand() / RAND_MAX * (MAX - MIN) + MIN;
+        }
+        
+        //~~~ matrix copy for final test
+        
+        #pragma acc parallel loop
+        for(int i = 0; i < size; i++)
+        {
+            c[i] = a[i];
+        }
+        
+        //~~~ transform matrix to a triangular form
+        
+        #pragma acc parallel loop
+        for(int i = 0; i < n; i++)
+        {
             #pragma acc loop
-            for(int k = i + 1; k <= n; k++)
+            for(int j = i + 1; j < n; j++)
             {
-                a[ID(j, k)] = a[ID(j, k)] - ratio * a[ID(i,k)];
+                TYPE ratio = a[ID(j,i)] / a[ID(i,i)];
+                #pragma data copyin(ratio)
+                {
+                    #pragma acc loop 
+                    for(int k = i + 1; k <= n; k++)
+                    {
+                        a[ID(j, k)] -= ratio * a[ID(i,k)];
+                    }
+                }
             }
         }
-    }
 
-    //~~~ calculate equation roots
-    
-    x[n-1] = a[ID(n-1,n)] / a[ID(n-1,n-1)];
-
-    #pragma acc parallel loop
-    for(int i = n-1; i >= 0; i--)
-    {
-        x[i] = a[ID(i,n)];
-        #pragma acc loop
-        for(int j = i+1; j < n; j++)
+        //~~~ calculate equation roots
+        
+        #pragma acc parallel loop
+        for(int i = n-1; i >= 0; i--)
         {
-            x[i] = x[i] - a[ID(i,j)] * x[j];
+            x[i] = a[ID(i,n)];
+            #pragma acc loop
+            for(int j = i+1; j < n; j++)
+            {
+                x[i] -= a[ID(i,j)] * x[j];
+            }
+            x[i] = x[i] / a[ID(i,i)];
         }
-        x[i] = x[i] / a[ID(i,i)];
-    }
-	
-    //~~~ calculate error
+        
+        //~~~ calculate error
 
-    // #pragma acc parallel loop
-    for(int i = 0; i < n; i++) {
-        TYPE sum = 0;
-        // #pragma acc loop
-        for (int j = 0; j < n; j++) {
-            sum += x[j] * c[ID(i,j)];
+        #pragma acc parallel loop reduction(max:err)
+        for(int i = 0; i < n; i++) {
+            double sum = 0;
+            #pragma acc loop reduction(+:sum)
+            for (int j = 0; j < n; j++) {
+                sum += x[j] * c[ID(i,j)];
+            }
+            err = std::max<double>(err, fabs(c[ID(i,n)] - sum));
         }
-        TYPE rerr = fabs(c[ID(i,n)] - sum);
-        if ( rerr > err) err = rerr;
-    }
+
+    } // end of acc data
 
     delete[] a;
     delete[] c;
     delete[] x;
-
-    } // end of acc data
 
     return err;
 }

@@ -23,7 +23,7 @@ float gaussTest(const size_t n)
         for(int j = 0; j <= n; j++)
             c[i][j] = a[i][j];
 	
-    //~~~ transform matrix to triangular form
+    //~~~ transform matrix to a triangular form
 	
     for(int i = 0; i < n; i++)
     {
@@ -39,8 +39,6 @@ float gaussTest(const size_t n)
 
     //~~~ calculate equation roots
     
-    x[n-1] = a[n-1][n] / a[n-1][n-1];
-
     for(int i = n-1; i >= 0; i--)
     {
         x[i] = a[i][n];
@@ -53,14 +51,14 @@ float gaussTest(const size_t n)
 	
     //~~~ calculate error
 
-    TYPE err = 0;
+    double err = 0;
     for(int i = 0; i < n; i++) {
-        TYPE sum = 0;
+        double e = 0;
         for (int j = 0; j < n; j++) {
-            sum += x[j] * c[i][j];
+            e += x[j] * c[i][j];
         }
-        TYPE rerr = fabs(c[i][n] - sum);
-        if ( rerr > err) err = rerr;
+        e = fabs(c[i][n] - e);
+        if ( e > err) err = e;
     }
 	
     return err;

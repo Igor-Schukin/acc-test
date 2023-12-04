@@ -29,9 +29,7 @@ float gaussTest(const size_t n)
         c[i] = a[i];
     }
 	
-    //show(a);
-	
-    //~~~ transform matrix to triangular form
+    //~~~ transform matrix to a triangular form
 	
     for(int i = 0; i < n; i++)
     {
@@ -47,8 +45,6 @@ float gaussTest(const size_t n)
 
     //~~~ calculate equation roots
     
-    x[n-1] = a[ID(n-1,n)] / a[ID(n-1,n-1)];
-
     for(int i = n-1; i >= 0; i--)
     {
         x[i] = a[ID(i,n)];
@@ -61,14 +57,13 @@ float gaussTest(const size_t n)
 	
     //~~~ calculate error
 
-    TYPE err = 0;
+    double err = 0;
     for(int i = 0; i < n; i++) {
-        TYPE sum = 0;
+        double sum = 0;
         for (int j = 0; j < n; j++) {
             sum += x[j] * c[ID(i,j)];
         }
-        TYPE rerr = fabs(c[ID(i,n)] - sum);
-        if ( rerr > err) err = rerr;
+        err = std::max<double>(err, fabs(c[ID(i,n)] - sum));
     }
 	
     delete[] a;
