@@ -9,6 +9,8 @@
 float riemannTest(const size_t intervals)
 {
     TYPE sum = func(xmin), dx = (xmax - xmin) / intervals;
+
+    #pragma acc parallel loop reduction(+:sum)
     for(int i = 1; i < intervals; i++)
     {
         sum += 2 * func(xmin + dx * i);
