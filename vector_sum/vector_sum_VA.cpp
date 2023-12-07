@@ -1,15 +1,13 @@
 #include <cstddef>
 #include <cstdio>
 #include <valarray>
+#include "definitions.h"
 
-void vector_sum(const size_t size, int* __restrict__ a)
+res_type vector_sum(const size_t size, type* __restrict__ a)
 {
+    std::valarray<type> va(size);
+    for (size_t i = 0; i < size; i++) va[i] = a[i]; 
+    res_type sum = va.sum();
 
-    std::valarray<int> va(size);
-
-    for (size_t i = 0; i < size; i++) va[i] = i; 
-
-    unsigned long long int sum = va.sum();
-
-    printf("sum of elements: %llu\n", sum);
+    return sum;
 }

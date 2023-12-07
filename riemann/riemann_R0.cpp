@@ -1,10 +1,8 @@
 #include <cmath>
 #include <cstdlib>
 #include <ctime>
-
+#include "definitions.h"
 #include "function.h"
-
-#define TYPE double
 
 float riemannTest(const size_t intervals)
 {

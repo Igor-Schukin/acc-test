@@ -1,10 +1,8 @@
 #include <cmath>
 #include <cstdlib>
 #include <ctime>
-
+#include "definitions.h"
 #include "function.h"
-
-#define TYPE double
 
 TYPE inline random(TYPE min, TYPE max) {
     return min + (TYPE)rand() / RAND_MAX * (max - min);

@@ -1,0 +1,38 @@
+----- Start 
+----- R0 ----- 
+subintervals number: 1,000,000,000
+Error = 0.0000103669
+elapsed time 1,212 ms
+----- R1 ----- 
+subintervals number: 1,000,000,000
+Error = 0.0000103669
+elapsed time 2,694 ms
+----- R2 ----- 
+subintervals number: 1,000,000,000
+Error = 0.0000103669
+elapsed time 1,213 ms
+----- T0 ----- 
+subintervals number: 1,000,000,000
+Error = 0.0000091169
+elapsed time 1,355 ms
+----- T1 ----- 
+subintervals number: 1,000,000,000
+Error = 0.0000091169
+elapsed time 2,699 ms
+----- T2 ----- 
+subintervals number: 1,000,000,000
+Error = 0.0000091169
+elapsed time 1,347 ms
+----- M0 ----- 
+subintervals number: 1,000,000,000
+Error = 0.0169516671
+elapsed time 39,864 ms
+----- M1 ----- 
+subintervals number: 1,000,000,000
+Error = 0.0260716658
+elapsed time 41,377 ms
+----- M2 ----- 
+subintervals number: 1,000,000,000
+Error = 0.0268341675
+elapsed time 40,752 ms
+----- Finish 

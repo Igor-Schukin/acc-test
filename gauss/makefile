@@ -1,11 +1,17 @@
-.PHONY: all
-.PRECIOUS: bin/gauss_%.exe
+ifeq ($(OS),Windows_NT)
+	ext=.exe
+else
+	ext=
+endif
 
-%: bin/gauss_%.exe
+.PHONY: all
+.PRECIOUS: bin/gauss_%$(ext)
+
+%: bin/gauss_%$(ext)
 	$<
 
-bin/gauss_%.exe: gauss.cpp gauss_%.o
+bin/gauss_%$(ext): gauss.cpp gauss_%.o definitions.h
 	g++ -std=c++17 -fopenacc  -o $@ $^
 
-gauss_%.o: gauss_%.cpp
+gauss_%.o: gauss_%.cpp definitions.h
 	g++ -std=c++17 -fopenacc -O -c $^

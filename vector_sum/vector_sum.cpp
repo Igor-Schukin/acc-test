@@ -3,16 +3,14 @@
 #include <string>
 #include <openacc.h>
 #include <chrono>
+#include "definitions.h"
 
-#define type int
-
-extern void vector_sum(
+extern res_type vector_sum(
     size_t size,
     type* __restrict__ a
 );
 
-const size_t BLOCK_SIZE = 128;
-const size_t MAX_BLOCK_COUNT = 0x1FFFFFFFF / sizeof(type) / BLOCK_SIZE;
+const size_t MAX_COUNT = 0x1FFFFFFFF / sizeof(type);
 
 int main(int argc, char *argv[])
 {
@@ -20,25 +18,24 @@ int main(int argc, char *argv[])
 
     //~~~ Determinate vector size: 0 - small, 1 - middle, 2 - maximum (default)
 
-    size_t blockCount = MAX_BLOCK_COUNT;
+    size_t size = MAX_COUNT;
     if (argc > 1) {
-        int bs = std::stoull(argv[1]);
-        if (bs == 0) blockCount = 100000;
-        else if (bs == 1) blockCount = 10000000;
+        size = std::stoull(argv[1]);
     }
-    size_t vectorSize = blockCount * BLOCK_SIZE;
 
-    printf("vector size: %'d\n", vectorSize);
+    size = (size / BLOCK_SIZE) * BLOCK_SIZE;
+    printf("vector size: %'d\n", size);
 
     //~~~ ACC payload
 
-    type* __restrict__ a = new type[vectorSize];
+    type* __restrict__ a = new type[size];
+    for (size_t i = 0; i < size; i++) a[i] = i;
 
     auto start = std::chrono::system_clock::now();
 
     //~~~ Include payload circles
 
-    vector_sum(vectorSize, a);
+    printf("error: %llu\n", vector_sum(size, a) - (size-1) * size / 2); // res_type = unsigned long long int
 
     //~~~ end of ACC payload
 

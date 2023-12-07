@@ -1,0 +1,46 @@
+----- Start 
+----- 0S ----- 
+vector size: 2,147,483,520
+error: 0
+elapsed time 1,425 ms
+----- 1S ----- 
+vector size: 2,147,483,520
+error: 0
+elapsed time 3,833 ms
+----- 2S ----- 
+vector size: 2,147,483,520
+error: 0
+elapsed time 1,025 ms
+----- 3S ----- 
+vector size: 2,147,483,520
+error: 0
+elapsed time 1,025 ms
+----- 4S ----- 
+vector size: 2,147,483,520
+error: 0
+elapsed time 1,422 ms
+----- 0D ----- 
+vector size: 2,147,483,520
+error: 0
+elapsed time 1,142 ms
+----- 1D ----- 
+vector size: 2,147,483,520
+error: 0
+elapsed time 1,531 ms
+----- 2D ----- 
+vector size: 2,147,483,520
+error: 0
+elapsed time 726 ms
+----- 3D ----- 
+vector size: 2,147,483,520
+error: 0
+elapsed time 724 ms
+----- 4D ----- 
+vector size: 2,147,483,520
+error: 0
+elapsed time 669 ms
+----- VA ----- 
+vector size: 2,147,483,520
+error: 16140901339373764608
+elapsed time 46,678 ms
+----- Finish 

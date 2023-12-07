@@ -1,10 +1,16 @@
-.PHONY: all
-.PRECIOUS: bin/riemann_%.exe
+ifeq ($(OS),Windows_NT)
+	ext=.exe
+else
+	ext=
+endif
 
-%: bin/riemann_%.exe
+.PHONY: all
+.PRECIOUS: bin/riemann_%$(ext)
+
+%: bin/riemann_%$(ext)
 	$<
 
-bin/riemann_%.exe: riemann.cpp riemann_%.o
+bin/riemann_%$(ext): riemann.cpp riemann_%.o
 	g++ -std=c++17 -fopenacc  -o $@ $^
 
 riemann_%.o: riemann_%.cpp function.h

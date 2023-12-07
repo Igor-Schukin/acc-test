@@ -1,0 +1,24 @@
+----- Start 
+----- 0 ----- 
+matrix size: 4,000
+Error = 0.0000416583
+elapsed time 19,465 ms
+----- 1 ----- 
+matrix size: 4,000
+Error = 0.0000008582
+elapsed time 31,663 ms
+----- 2 ----- 
+matrix size: 4,000
+Error = 0.0000008692
+elapsed time 16,006 ms
+----- 3 ----- 
+matrix size: 4,000
+Error = 0.0000176363
+elapsed time 16,460 ms
+----- 4 ----- 
+matrix size: 4,000
+Error = 0.0000053048
+elapsed time 15,564 ms
+----- 0M ----- 
+----- 1M ----- 
+----- Finish 

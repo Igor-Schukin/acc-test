@@ -1,27 +1,22 @@
 #include <cstddef>
 #include <cstdio>
 #include <cstdio>
+#include "definitions.h"
 
-const size_t BLOCK_SIZE = 128;
-
-void vector_sum(const size_t size, int* __restrict__ a)
+res_type vector_sum(const size_t size, type* __restrict__ a)
 {
+    res_type sum = 0;
     #pragma acc kernels
     {
         size_t blockCount = size / BLOCK_SIZE;
 
-        for (size_t block = 0; block < blockCount; block++) 
-            for (size_t i = block * BLOCK_SIZE; i < (block + 1) * BLOCK_SIZE; i++) 
-                a[i] = i; 
-
-        unsigned long long int sum = 0;
         for (size_t block = 0; block < blockCount; block++) {
-            unsigned long long int sumBlock = 0;
+            res_type sumBlock = 0;
             for (size_t i = block * BLOCK_SIZE; i < (block + 1) * BLOCK_SIZE; i++) 
                 sumBlock += a[i];
            sum += sumBlock;
         }
 
-        printf("sum of elements: %llu\n", sum);
     }
+    return sum;
 }

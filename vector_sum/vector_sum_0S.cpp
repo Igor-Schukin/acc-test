@@ -1,12 +1,11 @@
 #include <cstddef>
 #include <cstdio>
+#include "definitions.h"
 
-void vector_sum(const size_t size, int* __restrict__ a)
+res_type vector_sum(const size_t size, type* __restrict__ a)
 {
-    for (size_t i = 0; i < size; i++) a[i] = i; 
-
-    unsigned long long int sum = 0;
+    res_type sum = 0;
     for (size_t i = 0; i < size; i++) sum += a[i];
 
-    printf("sum of elements: %llu\n", sum);
+    return sum;
 }

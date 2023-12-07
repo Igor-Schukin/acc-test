@@ -3,6 +3,7 @@
 #include <string>
 #include <openacc.h>
 #include <chrono>
+#include "definitions.h"
 
 extern float riemannTest(const size_t intervals);
 

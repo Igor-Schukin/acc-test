@@ -2,10 +2,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <cstdio>
-
-#define MAX 100
-#define MIN -100
-#define TYPE double
+#include "definitions.h"
 
 float gaussTest(const size_t n)
 {

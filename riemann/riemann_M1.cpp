@@ -2,10 +2,8 @@
 #include <cstdlib>
 #include <cstdio>
 #include <ctime>
-
+#include "definitions.h"
 #include "function.h"
-
-#define TYPE double
 
 #pragma acc routine
 TYPE inline random(TYPE min, TYPE max) {

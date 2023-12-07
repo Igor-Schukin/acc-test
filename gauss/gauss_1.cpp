@@ -1,10 +1,8 @@
 #include <cmath>
 #include <cstdlib>
 #include <ctime>
+#include "definitions.h"
 
-#define MAX 100
-#define MIN -100
-#define TYPE double
 #define ID(i, j) ((i)*(n+1)+(j))
 
 float gaussTest(const size_t n)
