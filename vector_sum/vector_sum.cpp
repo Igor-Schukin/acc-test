@@ -16,14 +16,12 @@ int main(int argc, char *argv[])
 {
     setlocale(LC_NUMERIC, "");
 
-    //~~~ Determinate vector size: 0 - small, 1 - middle, 2 - maximum (default)
+    //~~~ Define vector size
 
     size_t size = MAX_COUNT;
-    if (argc > 1) {
-        size = std::stoull(argv[1]);
-    }
-
+    if (argc > 1) size = std::stoull(argv[1]);
     size = (size / BLOCK_SIZE) * BLOCK_SIZE;
+    
     printf("vector size: %'d\n", size);
 
     //~~~ ACC payload

@@ -6,7 +6,7 @@
 res_type vector_sum(const size_t size, type* __restrict__ a)
 {
     res_type sum = 0;
-    #pragma acc data  create(a[0:size])
+    #pragma acc data create(a[0:size])
     {
         size_t blockCount = size / BLOCK_SIZE;
 
