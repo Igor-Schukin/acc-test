@@ -15,10 +15,10 @@ int main(int argc, char *argv[])
     printf("current device %d\n", dev_num);
 
     size_t memory = acc_get_property(dev_num, dev_type, acc_property_memory); 
-    printf("  size of device memory in bytes %d\n", memory); 
+    printf("  size of device memory in bytes %lu\n", memory); 
 
     size_t free_memory = acc_get_property(dev_num, dev_type, acc_property_free_memory); 
-    printf("  free device memory in bytes %d\n", free_memory); 
+    printf("  free device memory in bytes %lu\n", free_memory); 
 
 //  // acc_property_shared_memory_support not supported by v 201711 (2.6)
 //    size_t shared_memory = acc_get_property(dev_num, dev_type, acc_property_shared_memory_support); 
