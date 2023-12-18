@@ -1,4 +1,4 @@
------ Start Mon Dec 18 12:23:53 PM EET 2023
+----- Start Mon Dec 18 12:31:10 PM EET 2023
 ----- R0 -----
 subintervals number: 1,000,000
 Error = 0.0012878929
@@ -25,14 +25,14 @@ Error = 0.0000378929
 elapsed time 2 ms
 ----- M0 -----
 subintervals number: 1,000,000
-Error = 1.8391666412
+Error = 0.8358333111
 elapsed time 49 ms
 ----- M1 -----
 subintervals number: 1,000,000
-Error = 1.8391666412
-elapsed time 39 ms
+Error = 0.8358333111
+elapsed time 42 ms
 ----- M2 -----
 subintervals number: 1,000,000
-Error = 1.8391666412
-elapsed time 39 ms
------ Finish Mon Dec 18 12:23:53 PM EET 2023
+Error = 0.8358333111
+elapsed time 42 ms
+----- Finish Mon Dec 18 12:31:10 PM EET 2023
