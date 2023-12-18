@@ -21,7 +21,7 @@
     warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
     ```
     Please note that you will need at least version 10 of g++!
-    If you don't have appropriate g++ version on your system, you can download and install [MinGW compiler collection] (https://sourceforge.net/projects/gcc-win64/)
+    If you don't have appropriate g++ version on your system, you can download and install [MinGW compiler collection](https://sourceforge.net/projects/gcc-win64/)
 
 1. You will also need the make utility to build the tests. To check the availability and version of make, enter the following command at the command prompt:
     ```
@@ -36,4 +36,4 @@
     PARTICULAR PURPOSE.
     This program built for i386-pc-mingw32
     ```
-    If you don't make utitity on your system, you can download and install [GNU tools for Windows] (https://sourceforge.net/projects/gnuwin32/)
+    If you don't make utitity on your system, you can download and install [GNU tools for Windows](https://sourceforge.net/projects/gnuwin32/)
