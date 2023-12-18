@@ -1,38 +1,38 @@
------ Start 
+----- Start  18.12.2023 12:20:53.21 
 ----- R0 ----- 
-subintervals number: 1,000,000,000
-Error = 0.0000103669
-elapsed time 1,212 ms
+subintervals number: 1,000
+Error = 1.2498667240
+elapsed time 0 ms
 ----- R1 ----- 
-subintervals number: 1,000,000,000
-Error = 0.0000103669
-elapsed time 2,694 ms
+subintervals number: 1,000
+Error = 1.2498667240
+elapsed time 0 ms
 ----- R2 ----- 
-subintervals number: 1,000,000,000
-Error = 0.0000103669
-elapsed time 1,213 ms
+subintervals number: 1,000
+Error = 1.2498667240
+elapsed time 0 ms
 ----- T0 ----- 
-subintervals number: 1,000,000,000
-Error = 0.0000091169
-elapsed time 1,355 ms
+subintervals number: 1,000
+Error = 0.0001332340
+elapsed time 0 ms
 ----- T1 ----- 
-subintervals number: 1,000,000,000
-Error = 0.0000091169
-elapsed time 2,699 ms
+subintervals number: 1,000
+Error = 0.0001332340
+elapsed time 0 ms
 ----- T2 ----- 
-subintervals number: 1,000,000,000
-Error = 0.0000091169
-elapsed time 1,347 ms
+subintervals number: 1,000
+Error = 0.0001332340
+elapsed time 0 ms
 ----- M0 ----- 
-subintervals number: 1,000,000,000
-Error = 0.0169516671
-elapsed time 39,864 ms
+subintervals number: 1,000
+Error = 86.6666641235
+elapsed time 0 ms
 ----- M1 ----- 
-subintervals number: 1,000,000,000
-Error = 0.0260716658
-elapsed time 41,377 ms
+subintervals number: 1,000
+Error = 86.6666641235
+elapsed time 0 ms
 ----- M2 ----- 
-subintervals number: 1,000,000,000
-Error = 0.0268341675
-elapsed time 40,752 ms
------ Finish 
+subintervals number: 1,000
+Error = 86.6666641235
+elapsed time 0 ms
+----- Finish  18.12.2023 12:20:53.41 

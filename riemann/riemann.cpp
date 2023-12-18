@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     size_t intervals = DEFAULT_INTERVALS;
     if (argc > 1) intervals = std::stoull(argv[1]);
 
-    printf("subintervals number: %'d\n", intervals);
+    printf("subintervals number: %'ld\n", intervals);
 
     auto start = std::chrono::system_clock::now();
 
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     //~~~ end of ACC payload
 
     auto end = std::chrono::system_clock::now();
-    auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
 
     printf("elapsed time %'d ms\n", elapsed);
 
