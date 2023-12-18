@@ -7,7 +7,7 @@
 1. ***riemann*** - the Riemann sum using rectangular, trapezoidal and Monte Carlo methods
 1. ***gauss*** - solving a system of linear equations using the Gauss method
 
-### Installing in Windows
+### Preparing a Windows system
 
 1.  Before start, you will need a g++ compiler with openACC support. To check the current version of g++ on your computer, enter the following command at the command prompt:
     ```
@@ -36,4 +36,35 @@
     PARTICULAR PURPOSE.
     This program built for i386-pc-mingw32
     ```
-    If you don't make utitity on your system, you can download and install [GNU tools for Windows](https://sourceforge.net/projects/gnuwin32/)
+    If you don't have make utitity on your system, you can download and install [GNU tools for Windows](https://sourceforge.net/projects/gnuwin32/)
+
+1.  You can now clone your test source files. Navigate to the folder where you want to place the source files folder:
+    ```
+    cd the_root_forder_for_project_files
+    ```
+    and copy test sources from the repository:
+    ```
+    git@github.com:Igor-Schukin/acc-test.git
+    ```
+
+1.  Final test. To make sure everything runs without errors, you can build and run the first test:
+    ```
+    cd acc-test\.info
+    make
+    ```
+    You have to see something like this:
+    ```
+    mkdir bin
+    g++ -std=c++17 -fopenacc -o ./bin/info.exe info.cpp
+    ./bin/info.exe
+    openACC version 201711
+    current device type 2
+    number of devices 1
+    current device 0
+        size of device memory in bytes 0
+        free device memory in bytes 0
+        device vendor GOMP
+        device driver version 1.0
+  ```
+
+1.  If everything is ok, we can start testing openACC.
