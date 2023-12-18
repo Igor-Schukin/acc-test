@@ -65,6 +65,6 @@
         free device memory in bytes 0
         device vendor GOMP
         device driver version 1.0
-  ```
+    ```
 
 1.  If everything is ok, we can start testing openACC.
