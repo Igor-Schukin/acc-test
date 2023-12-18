@@ -5,7 +5,7 @@ else
 endif
 
 run: info.exe
-	./info$(ext)
+	./bin/info$(ext)
 
 info.exe: info.cpp
-	gcc -x c++ -std=c++17 -fopenacc -o info$(ext) info.cpp
+	gcc -x c++ -std=c++17 -fopenacc -o ./bin/info$(ext) info.cpp
