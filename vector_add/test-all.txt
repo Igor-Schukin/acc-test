@@ -1,46 +1,46 @@
------ Start Mon Dec 18 11:35:04 AM EET 2023
------ 0S -----
-vector size: 100,000,000
+----- Start  18.12.2023 11:52:33.19 
+----- 0S ----- 
+vector size: 999,936
 error: 0
-elapsed time 276 ms
------ 1S -----
-vector size: 100,000,000
+elapsed time 2 ms
+----- 1S ----- 
+vector size: 999,936
 error: 0
-elapsed time 295 ms
------ 2S -----
-vector size: 100,000,000
+elapsed time 2 ms
+----- 2S ----- 
+vector size: 999,936
 error: 0
-elapsed time 213 ms
------ 3S -----
-vector size: 100,000,000
+elapsed time 3 ms
+----- 3S ----- 
+vector size: 999,936
 error: 0
-elapsed time 210 ms
------ 4S -----
-vector size: 100,000,000
+elapsed time 1 ms
+----- 4S ----- 
+vector size: 999,936
 error: 0
-elapsed time 275 ms
------ 0D -----
-vector size: 100,000,000
+elapsed time 2 ms
+----- 0D ----- 
+vector size: 999,936
 error: 0
-elapsed time 277 ms
------ 1D -----
-vector size: 100,000,000
+elapsed time 2 ms
+----- 1D ----- 
+vector size: 999,936
 error: 0
-elapsed time 257 ms
------ 2D -----
-vector size: 100,000,000
+elapsed time 1 ms
+----- 2D ----- 
+vector size: 999,936
 error: 0
-elapsed time 204 ms
------ 3D -----
-vector size: 100,000,000
+elapsed time 1 ms
+----- 3D ----- 
+vector size: 999,936
 error: 0
-elapsed time 202 ms
------ 4D -----
-vector size: 100,000,000
+elapsed time 1 ms
+----- 4D ----- 
+vector size: 999,936
 error: 0
-elapsed time 202 ms
------ VA -----
-vector size: 100,000,000
+elapsed time 1 ms
+----- VA ----- 
+vector size: 999,936
 error: 0
-elapsed time 933 ms
------ Finish Mon Dec 18 11:35:14 AM EET 2023
+elapsed time 6 ms
+----- Finish 18.12.2023 11:52:33.66 
