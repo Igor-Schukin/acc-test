@@ -7,6 +7,16 @@
 1. ***riemann*** - the Riemann sum using rectangular, trapezoidal and Monte Carlo methods
 1. ***gauss*** - solving a system of linear equations using the Gauss method
 
+## Useful links
+
+1.  GCC Wiki: [GCC's implementation of the OpenACC specification](https://gcc.gnu.org/wiki/OpenACC)
+1.  [Introduction to OpenACC Programming Model](https://ulhpc-tutorials.readthedocs.io/en/latest/gpu/openacc/basics/)
+1.  [OpenACC resources](https://www.openacc.org/resources)
+1.  [Popular github repositories](https://github.com/OpenACC)
+1.  [NVIDIA HPC SDK](https://developer.nvidia.com/hpc-sdk)
+1.  [PGI Compilers & Tools](https://www.pgroup.com/index.htm)
+1.  [Downloads & Tools](https://www.openacc.org/tools)
+
 ## Preparing a Windows system
 
 1.  Before start, you will need a g++ compiler with openACC support. To check the current version of g++ on your computer, enter the following command at the command prompt:
@@ -38,7 +48,7 @@
     ```
     If you don't have make utitity on your system, you can download and install [GNU tools for Windows](https://sourceforge.net/projects/gnuwin32/)
 
-1.  You can now clone your test source files. Navigate to the folder where you want to place the source files folder:
+1.  You can now clone the test source files. Navigate to the folder where you want to place the source files folder:
     ```
     cd the_root_forder_for_project_files
     ```
@@ -106,7 +116,7 @@
     sudo apt install make
     ```
 
-1.  You can now clone your test source files. Navigate to the folder where you want to place the source files folder:
+1.  You can now clone the test source files. Navigate to the folder where you want to place the source files folder:
     ```
     cd the_root_forder_for_project_files
     ```
