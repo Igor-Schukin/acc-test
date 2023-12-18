@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     auto end = std::chrono::system_clock::now();
     auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
 
-    printf("elapsed time %'d ms\n", elapsed);
+    printf("elapsed time %'ld ms\n", elapsed);
 
     return 0;
 }
