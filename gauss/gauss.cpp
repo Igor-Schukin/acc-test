@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     size_t size = DEFAULT_MATRIX_SIZE;
     if (argc > 1) size = std::stoull(argv[1]);
 
-    printf("matrix size: %'d\n", size);
+    printf("matrix size: %'ld\n", size);
 
     auto start = std::chrono::system_clock::now();
 
@@ -32,9 +32,9 @@ int main(int argc, char *argv[])
     //~~~ end of ACC payload
 
     auto end = std::chrono::system_clock::now();
-    auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
 
-    printf("elapsed time %'d ms\n", elapsed);
+    printf("elapsed time %'ld ms\n", elapsed);
 
     return 0;
 }

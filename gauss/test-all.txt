@@ -1,24 +1,30 @@
------ Start 
+----- Start  18.12.2023 12:29:31.39 
 ----- 0 ----- 
-matrix size: 4,000
-Error = 0.0000416583
-elapsed time 19,465 ms
+matrix size: 100
+Error = 0.0000000000
+elapsed time 0 ms
 ----- 1 ----- 
-matrix size: 4,000
-Error = 0.0000008582
-elapsed time 31,663 ms
+matrix size: 100
+Error = 0.0000000000
+elapsed time 0 ms
 ----- 2 ----- 
-matrix size: 4,000
-Error = 0.0000008692
-elapsed time 16,006 ms
+matrix size: 100
+Error = 0.0000000000
+elapsed time 0 ms
 ----- 3 ----- 
-matrix size: 4,000
-Error = 0.0000176363
-elapsed time 16,460 ms
+matrix size: 100
+Error = 0.0000000000
+elapsed time 0 ms
 ----- 4 ----- 
-matrix size: 4,000
-Error = 0.0000053048
-elapsed time 15,564 ms
+matrix size: 100
+Error = 0.0000000000
+elapsed time 0 ms
 ----- 0M ----- 
+matrix size: 100
+Error = 0.0000000000
+elapsed time 0 ms
 ----- 1M ----- 
------ Finish 
+matrix size: 100
+Error = 0.0000000000
+elapsed time 0 ms
+----- Finish  18.12.2023 12:29:31.56 
