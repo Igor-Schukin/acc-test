@@ -4,8 +4,11 @@ else
 	ext=
 endif
 
-run: info.exe
+run: bin bin/info$(ext)
 	./bin/info$(ext)
 
-info.exe: info.cpp
-	gcc -x c++ -std=c++17 -fopenacc -o ./bin/info$(ext) info.cpp
+bin/info$(ext): info.cpp
+	g++ -std=c++17 -fopenacc -o ./bin/info$(ext) info.cpp
+
+bin:
+	mkdir $@
