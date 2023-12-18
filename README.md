@@ -7,7 +7,7 @@
 1. ***riemann*** - the Riemann sum using rectangular, trapezoidal and Monte Carlo methods
 1. ***gauss*** - solving a system of linear equations using the Gauss method
 
-### Preparing a Windows system
+## Preparing a Windows system
 
 1.  Before start, you will need a g++ compiler with openACC support. To check the current version of g++ on your computer, enter the following command at the command prompt:
     ```
