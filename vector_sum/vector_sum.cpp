@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     if (argc > 1) size = std::stoull(argv[1]);
     size = (size / BLOCK_SIZE) * BLOCK_SIZE;
     
-    printf("vector size: %'d\n", size);
+    printf("vector size: %'ld\n", size);
 
     //~~~ ACC payload
 
@@ -38,9 +38,9 @@ int main(int argc, char *argv[])
     //~~~ end of ACC payload
 
     auto end = std::chrono::system_clock::now();
-    auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
 
-    printf("elapsed time %'d ms\n", elapsed);
+    printf("elapsed time %'ld ms\n", elapsed);
 
     delete[] a;
 

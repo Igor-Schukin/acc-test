@@ -10,7 +10,7 @@ endif
 
 all: 0S 1S 2S 3S 4S 0D 1D 2D 3D 4D VA
 
-%: bin/vector_sum_%$(ext)
+%: bin/vector_sum_%$(ext) bin
 	$< 1000000
 
 bin/vector_sum_%$(ext): vector_sum.cpp vector_sum_%.o definitions.h
@@ -18,3 +18,6 @@ bin/vector_sum_%$(ext): vector_sum.cpp vector_sum_%.o definitions.h
 
 vector_sum_%.o: vector_sum_%.cpp definitions.h
 	g++ -std=c++17 -fopenacc -O -c $^
+
+bin:
+	mkdir $@
