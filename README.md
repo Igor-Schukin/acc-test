@@ -203,11 +203,11 @@
 
 ### Make single test
 
-    1. enter the selected test folder (TEST = vector_sum | vector_add | riemann |gauss)
+1. enter the selected test folder (TEST = vector_sum | vector_add | riemann |gauss)
     ```
     cd TEST
     ```
-    2. build test (VERSION = 0S | 0D | 1S...)
+2. build test (VERSION = 0S | 0D | 1S...)
     ```
     make VERSION
     ```
