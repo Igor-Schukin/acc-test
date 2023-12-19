@@ -203,18 +203,26 @@
 
 ### Make single test
 
-1. enter the selected test folder (TEST = vector_sum | vector_add | riemann |gauss)
+1. enter the selected test folder
     ```
     cd TEST
     ```
-2. build test (VERSION = 0S | 0D | 1S...)
+    where TEST = vector_sum | vector_add | riemann |gauss
+2. build test
     ```
     make VERSION
     ```
-    the test will be compiled and executed with minimal load. To repeat the test with a larger load, enter:
-    ``` for Windows
-    .\bin\TEST_VERSION LOAD
+    where VERSION = 0S | 0D | 1S... depenfing on TEST
+3. the test will be compiled and executed with minimal load. To repeat the test with a larger load, enter (for Windows):
     ```
+    .\bin\TEST_VERSION.exe LOAD
+    ```
+    or for Linux
+    ```
+    ./bin/TEST_VERSION LOAD
+    ```
+    where LOAD is an integer defining the test load:
+    - for ***vector_sum*** - the size of vector 0...2'000'000'000
 
 ### Test all versions of one test
 
