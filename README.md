@@ -187,7 +187,7 @@
 - ***T2*** - trapezoidal method: using **acc parallel loop reduction**,
 - ***M0*** - Monte Carlo method: basic version without openACC,
 - ***M1*** - Monte Carlo method: using **acc kernels**,
-- ***M2*** - Monte Carlo method: using **acc parallel loop reduction**,
+- ***M2*** - Monte Carlo method: using **acc parallel loop reduction**.
 
 ### ***gauss*** - solving a system of linear equations using the Gauss method
 
@@ -197,4 +197,24 @@
 - ***1M*** - using **acc kernels** (based on two-dimensional arrays),
 - ***2***  - using **acc parallel loop** (based on one-dimensional arrays),
 - ***3***  - using **acc data** (based on one-dimensional arrays),
-- ***4***  - using **acc create, reduction** (based on one-dimensional arrays),
+- ***4***  - using **acc create, reduction** (based on one-dimensional arrays).
+
+## Make tests
+
+### Make single test
+    1. enter the selected test folder (TEST = vector_sum | vector_add | riemann |gauss)
+    ```
+    cd TEST
+    ```
+    2. build test (VERSION = 0S | 0D | 1S...)
+    ```
+    make VERSION
+    ```
+    the test will be compiled and executed with minimal load. To repeat the test with a larger load, enter:
+    ``` for Windows
+    .\bin\TEST_VERSION LOAD
+    ```
+
+### Test all versions of one test
+
+### Mak all tests
