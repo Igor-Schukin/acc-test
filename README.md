@@ -201,13 +201,13 @@
 
 ## Make tests
 
-### Test single single version of single test
+### Test single version of single test
 
 1. enter the selected test folder
     ```
     cd TEST
     ```
-    where TEST = vector_sum | vector_add | riemann |gauss
+    where TEST = vector_sum | vector_add | riemann | gauss
 2. build test
     ```
     make VERSION
@@ -252,5 +252,3 @@
     - for ***riemann*** - the number of intervals or points 1...1'000'000'000
     - for ***gauss*** - the size of matrix 1...47'000
 4. test results will be stores in the file test-all.txt in the folder of test
-
-### Mak all tests
