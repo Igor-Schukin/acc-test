@@ -1,38 +1,38 @@
------ Start Mon Dec 18 12:31:10 PM EET 2023
------ R0 -----
+----- Start  19.12.2023 11:39:20.72 
+----- R0 ----- 
 subintervals number: 1,000,000
 Error = 0.0012878929
 elapsed time 1 ms
------ R1 -----
+----- R1 ----- 
 subintervals number: 1,000,000
 Error = 0.0012878929
-elapsed time 3 ms
------ R2 -----
+elapsed time 2 ms
+----- R2 ----- 
 subintervals number: 1,000,000
 Error = 0.0012878929
 elapsed time 1 ms
------ T0 -----
+----- T0 ----- 
+subintervals number: 1,000,000
+Error = 0.0000378929
+elapsed time 1 ms
+----- T1 ----- 
 subintervals number: 1,000,000
 Error = 0.0000378929
 elapsed time 2 ms
------ T1 -----
+----- T2 ----- 
 subintervals number: 1,000,000
 Error = 0.0000378929
-elapsed time 3 ms
------ T2 -----
+elapsed time 1 ms
+----- M0 ----- 
 subintervals number: 1,000,000
-Error = 0.0000378929
-elapsed time 2 ms
------ M0 -----
+Error = 1.7466666698
+elapsed time 38 ms
+----- M1 ----- 
 subintervals number: 1,000,000
-Error = 0.8358333111
-elapsed time 49 ms
------ M1 -----
+Error = 1.7466666698
+elapsed time 40 ms
+----- M2 ----- 
 subintervals number: 1,000,000
-Error = 0.8358333111
-elapsed time 42 ms
------ M2 -----
-subintervals number: 1,000,000
-Error = 0.8358333111
-elapsed time 42 ms
------ Finish Mon Dec 18 12:31:10 PM EET 2023
+Error = 1.9908332825
+elapsed time 44 ms
+----- Finish  19.12.2023 11:39:21.06 
