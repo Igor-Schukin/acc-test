@@ -201,7 +201,7 @@
 
 ## Make tests
 
-### Make single test
+### Test single single version of single test
 
 1. enter the selected test folder
     ```
@@ -222,8 +222,35 @@
     ./bin/TEST_VERSION LOAD
     ```
     where LOAD is an integer defining the test load:
-    - for ***vector_sum*** - the size of vector 0...2'000'000'000
+    - for ***vector_sum*** - the size of vector 1...2'000'000'000
+    - for ***vector_add*** - the size of vector 1...2'000'000'000
+    - for ***riemann*** - the number of intervals or points 1...1'000'000'000
+    - for ***gauss*** - the size of matrix 1...47'000
 
-### Test all versions of one test
+### Test all versions of single test
+
+1. enter the selected test folder
+    ```
+    cd TEST
+    ```
+    where TEST = vector_sum | vector_add | riemann |gauss
+2. build tests
+    ```
+    make
+    ```
+3. all versions of the test will be compiled and executed with minimal load. To repeat the test with a larger load, enter (for Windows):
+    ```
+    .\test-all.bat LOAD
+    ```
+    or for Linux
+    ```
+    ./test-all.sh LOAD
+    ```
+    where LOAD is an integer defining the test load:
+    - for ***vector_sum*** - the size of vector 1...2'000'000'000
+    - for ***vector_add*** - the size of vector 1...2'000'000'000
+    - for ***riemann*** - the number of intervals or points 1...1'000'000'000
+    - for ***gauss*** - the size of matrix 1...47'000
+4. test results will be stores in the file test-all.txt in the folder of test
 
 ### Mak all tests
