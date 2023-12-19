@@ -146,3 +146,23 @@
     ```
 
 1.  If everything is ok, we can start testing openACC.
+
+## Versions of tests
+
+### ***vector_sum*** - reduction of the integer vector elements by sum
+    ***0S*** - basic version without openACC, one loop without explicit separation into chunks,
+    ***0D*** - basic version without openACC, explicit separation into chunks using two nested loops,
+    ***1S*** - using acc kernels, one loop without explicit separation into chunks,
+    ***1D*** - using acc kernels, explicit separation into chunks using two nested loops,
+    ***2S*** - using acc parallel loop, one loop without explicit separation into chunks,
+    ***2D*** - using acc parallel loop, explicit separation into chunks using two nested loops,
+    ***3S*** - using acc data, one loop without explicit separation into chunks,
+    ***3D*** - using acc data, explicit separation into chunks using two nested loops,
+    ***3S*** - using acc data, one loop without explicit separation into chunks,
+    ***3D*** - using acc data, explicit separation into chunks using two nested loops,
+    ***4S*** - using acc data create, one loop without explicit separation into chunks,
+    ***4D*** - using acc data create, explicit separation into chunks using two nested loops,
+    ***VA*** - using C++ template std::valarray, one loop without explicit separation into chunks,
+### ***vector_add*** - addition of two integer vectors
+### ***riemann*** - the Riemann sum using rectangular, trapezoidal and Monte Carlo methods
+### ***gauss*** - solving a system of linear equations using the Gauss method
