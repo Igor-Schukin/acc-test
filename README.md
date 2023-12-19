@@ -3,7 +3,7 @@
 ## Set of test tasks
 
 1. ***vector_sum*** - reduction of the integer vector elements by sum
-1. ***vector_add*** - addition of two integer vectors
+1. ***vector_add*** - addition of two integer vectors and sum reduction by max
 1. ***riemann*** - the Riemann sum using rectangular, trapezoidal and Monte Carlo methods
 1. ***gauss*** - solving a system of linear equations using the Gauss method
 
@@ -163,6 +163,38 @@
 - ***4D*** - using **acc data create**, explicit separation into chunks using two nested loops,
 - ***VA*** - using C++ template **std::valarray**, one loop without explicit separation into chunks.
 
-### ***vector_add*** - addition of two integer vectors
-### ***riemann*** - the Riemann sum using rectangular, trapezoidal and Monte Carlo methods
+### ***vector_add*** - addition of two integer vectors and sum reduction by max
+
+- ***0S*** - basic version without openACC, one loop without explicit separation into chunks,
+- ***0D*** - basic version without openACC, explicit separation into chunks using two nested loops,
+- ***1S*** - using **acc kernels**, one loop without explicit separation into chunks,
+- ***1D*** - using **acc kernels**, explicit separation into chunks using two nested loops,
+- ***2S*** - using **acc parallel loop**, one loop without explicit separation into chunks,
+- ***2D*** - using **acc parallel loop**, explicit separation into chunks using two nested loops,
+- ***3S*** - using **acc data**, one loop without explicit separation into chunks,
+- ***3D*** - using **acc data**, explicit separation into chunks using two nested loops,
+- ***4S*** - using **acc loop reduction**, one loop without explicit separation into chunks,
+- ***4D*** - using **acc loop reduction**, explicit separation into chunks using two nested loops,
+- ***VA*** - using C++ template **std::valarray**, one loop without explicit separation into chunks.
+
+### ***riemann*** - the Riemann sum using rectangular (R), trapezoidal (T) and Monte Carlo (M) methods
+
+- ***R0*** - rectangular method: basic version without openACC,
+- ***R1*** - rectangular method: using **acc kernels**,
+- ***R2*** - rectangular method: using **acc parallel loop reduction**,
+- ***T0*** - trapezoidal method: basic version without openACC,
+- ***T1*** - trapezoidal method: using **acc kernels**,
+- ***T2*** - trapezoidal method: using **acc parallel loop reduction**,
+- ***M0*** - Monte Carlo method: basic version without openACC,
+- ***M1*** - Monte Carlo method: using **acc kernels**,
+- ***M2*** - Monte Carlo method: using **acc parallel loop reduction**,
+
 ### ***gauss*** - solving a system of linear equations using the Gauss method
+
+- ***0***  - basic version without openACC (based on one-dimensional arrays),
+- ***0M*** - basic version without openACC (based on two-dimensional arrays),
+- ***1***  - using **acc kernels** (based on one-dimensional arrays),
+- ***1M*** - using **acc kernels** (based on two-dimensional arrays),
+- ***2***  - using **acc parallel loop** (based on one-dimensional arrays),
+- ***3***  - using **acc data** (based on one-dimensional arrays),
+- ***4***  - using **acc create, reduction** (based on one-dimensional arrays),
