@@ -1,46 +1,46 @@
------ Start Mon Dec 18 12:13:22 PM EET 2023
------ 0S -----
-vector size: 999,936
+----- Start  04.01.2024 13:52:11.02 
+----- 0S ----- 
+vector size: 2,000,000,000
+elapsed time (ms) 1,331 1,256 959 1,122 1,036 998 956 957 953 954 
 error: 0
-elapsed time 0 ms
------ 1S -----
-vector size: 999,936
+----- 1S ----- 
+vector size: 2,000,000,000
+elapsed time (ms) 3,581 3,266 3,203 3,204 3,204 3,205 3,206 3,205 3,203 3,205 
 error: 0
-elapsed time 6 ms
------ 2S -----
-vector size: 999,936
+----- 2S ----- 
+vector size: 2,000,000,000
+elapsed time (ms) 960 955 955 999 955 955 956 956 955 957 
 error: 0
-elapsed time 0 ms
------ 3S -----
-vector size: 999,936
+----- 3S ----- 
+vector size: 2,000,000,000
+elapsed time (ms) 957 956 956 963 958 960 958 958 957 958 
 error: 0
-elapsed time 0 ms
------ 4S -----
-vector size: 999,936
+----- 4S ----- 
+vector size: 2,000,000,000
+elapsed time (ms) 958 955 957 959 959 960 955 958 958 957 
 error: 0
-elapsed time 0 ms
------ 0D -----
-vector size: 999,936
+----- 0D ----- 
+vector size: 2,000,000,000
+elapsed time (ms) 1,072 1,070 1,072 1,070 1,073 1,071 1,116 1,183 1,075 1,073 
 error: 0
-elapsed time 0 ms
------ 1D -----
-vector size: 999,936
+----- 1D ----- 
+vector size: 2,000,000,000
+elapsed time (ms) 1,428 1,429 1,428 1,430 1,429 1,427 1,425 1,427 1,429 1,431 
 error: 0
-elapsed time 1 ms
------ 2D -----
-vector size: 999,936
+----- 2D ----- 
+vector size: 2,000,000,000
+elapsed time (ms) 669 669 665 671 668 672 668 664 662 668 
 error: 0
-elapsed time 0 ms
------ 3D -----
-vector size: 999,936
+----- 3D ----- 
+vector size: 2,000,000,000
+elapsed time (ms) 765 761 715 714 731 831 696 680 685 674 
 error: 0
-elapsed time 0 ms
------ 4D -----
-vector size: 999,936
+----- 4D ----- 
+vector size: 2,000,000,000
+elapsed time (ms) 631 617 693 702 625 657 637 646 649 620 
 error: 0
-elapsed time 0 ms
------ VA -----
-vector size: 999,936
-error: 18446743575493345280
-elapsed time 4 ms
------ Finish Mon Dec 18 12:13:22 PM EET 2023
+----- VA ----- 
+vector size: 2,000,000,000
+elapsed time (ms) 59,137 38,673 62,381 46,211 27,948 30,313 54,385 40,641 43,121 26,786 
+error: 16446744075031281664
+----- Finish  04.01.2024 14:02:12.07 
