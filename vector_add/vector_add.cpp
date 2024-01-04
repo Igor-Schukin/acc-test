@@ -21,7 +21,9 @@ int main(int argc, char *argv[])
     //~~~ Define vector size
 
     size_t size = MAX_COUNT;
+    int count = 1;
     if (argc > 1) size = std::stoull(argv[1]);
+    if (argc == 3) count = std::stoi(argv[2]);
     size = (size / BLOCK_SIZE) * BLOCK_SIZE;
 
     printf("vector size: %'ld\n", size);
@@ -36,20 +38,28 @@ int main(int argc, char *argv[])
 
     type* __restrict__ c = new type[size];
 
-    auto start = std::chrono::system_clock::now();
+    type max = 0;
 
-    //~~~ Include payload circles
+    printf("elapsed time, ms: ");
 
-    type max = vector_add(size, a, b, c);
+    for (int i = 0; i < count; i++) {
 
-    printf("error: %d\n", max); // for type = int
+        auto start = std::chrono::system_clock::now();
 
-    //~~~ end of ACC payload
+        //~~~ Include payload circles
 
-    auto end = std::chrono::system_clock::now();
-    auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+        type res = vector_add(size, a, b, c);
+        if (res > max) max = res;
 
-    printf("elapsed time %'lu ms\n", elapsed);
+        //~~~ end of ACC payload
+
+        auto end = std::chrono::system_clock::now();
+        auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+
+        printf("%lu ", elapsed);
+
+    }
+    printf("\nerror: %d\n", max); // for type = int
 
     delete[] a;
     delete[] b;

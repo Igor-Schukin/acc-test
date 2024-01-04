@@ -5,4 +5,4 @@
 *.gch
 *.exe
 *.o
-test-all.txt
+*/test-all.txt
