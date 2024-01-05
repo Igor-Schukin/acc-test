@@ -20,21 +20,32 @@ int main(int argc, char *argv[])
 
     size_t size = DEFAULT_MATRIX_SIZE;
     if (argc > 1) size = std::stoull(argv[1]);
+    int count = 1;
+    if (argc == 3) count = std::stoi(argv[2]);
 
     printf("matrix size: %'ld\n", size);
 
-    auto start = std::chrono::system_clock::now();
+    printf("elapsed time, ms: ");
+    float error = 0;
 
-    //~~~ ACC payload
+    for (int i = 0; i < count; i++) {
 
-    printf("Error = %.10f\n", gaussTest(size));
+        auto start = std::chrono::system_clock::now();
 
-    //~~~ end of ACC payload
+        //~~~ ACC payload
 
-    auto end = std::chrono::system_clock::now();
-    auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+        float res = gaussTest(size);
+        if (res > error) error = res;
 
-    printf("elapsed time %'ld ms\n", elapsed);
+        //~~~ end of ACC payload
+
+        auto end = std::chrono::system_clock::now();
+        auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+
+        printf("%ld ", elapsed);
+    }
+
+    printf("\nError = %.10f\n", error);
 
     return 0;
 }

@@ -18,22 +18,32 @@ int main(int argc, char *argv[])
     //~~~ Determinate matrix size
 
     size_t intervals = DEFAULT_INTERVALS;
+    int count = 1;
     if (argc > 1) intervals = std::stoull(argv[1]);
+    if (argc == 3) count = std::stoi(argv[2]);
 
     printf("subintervals number: %'ld\n", intervals);
+    printf("elapsed time, ms: ");
+    float error = 0;
 
-    auto start = std::chrono::system_clock::now();
+    for (int i = 0; i < count; i++) {
 
-    //~~~ ACC payload
+        auto start = std::chrono::system_clock::now();
 
-    printf("Error = %.10f\n", riemannTest(intervals));
+        //~~~ ACC payload
 
-    //~~~ end of ACC payload
+        float res = riemannTest(intervals);
+        if (res > error) error = res;
 
-    auto end = std::chrono::system_clock::now();
-    auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+        //~~~ end of ACC payload
 
-    printf("elapsed time %'ld ms\n", elapsed);
+        auto end = std::chrono::system_clock::now();
+        auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+
+        printf("%ld ", elapsed);
+    }
+
+    printf("\nrror = %.10f\n", error);
 
     return 0;
 }
