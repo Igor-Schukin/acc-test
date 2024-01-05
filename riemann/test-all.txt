@@ -1,29 +1,38 @@
------ Start  05.01.2024  9:01:44.61 
------ R0 ----- 
-subintervals number: 1,000,000,000
-elapsed time, ms: 1434 1416 1497 1426 1443 1243 1248 1323 1398 1423 Error = 0.0000103669
------ R1 ----- 
-subintervals number: 1,000,000,000
-elapsed time, ms: 3077 2871 2692 2720 2875 2676 2748 2856 2941 2945 Error = 0.0000103669
------ R2 ----- 
-subintervals number: 1,000,000,000
-elapsed time, ms: 1459 1300 1201 1221 1201 1195 1198 1198 1201 1201 Error = 0.0000103669
------ T0 ----- 
-subintervals number: 1,000,000,000
-elapsed time, ms: 1343 1719 1439 1784 2058 1459 1444 1752 1405 1349 Error = 0.0000091169
------ T1 ----- 
-subintervals number: 1,000,000,000
-elapsed time, ms: 2715 2722 2709 2682 2678 2704 2692 2685 2709 2679 Error = 0.0000091169
------ T2 ----- 
-subintervals number: 1,000,000,000
-elapsed time, ms: 1320 1348 1477 1326 1360 1339 1343 1319 1346 1319 Error = 0.0000091169
------ M0 ----- 
-subintervals number: 1,000,000,000
-elapsed time, ms: 39235 40382 39576 39431 41721 41035 40633 38932 39230 39903 Error = 0.0390166678
------ M1 ----- 
-subintervals number: 1,000,000,000
-elapsed time, ms: 39581 39257 39911 42137 39598 39817 39598 39136 39146 39195 Error = 0.0344016664
------ M2 ----- 
-subintervals number: 1,000,000,000
-elapsed time, ms: 44643 40454 43194 41144 41222 41047 41296 41285 40937 41582 Error = 0.0322491676
------ Finish  05.01.2024  9:23:50.01 
+----- Start Fri Jan 5 11:46:13 AM EET 2024
+----- R0 -----
+subintervals number: 500,000,000
+elapsed time, ms: 584 565 565 565 565 565 565 565 566 565 
+rror = 0.0000116163
+----- R1 -----
+subintervals number: 500,000,000
+elapsed time, ms: 1220 1220 1219 1219 1222 1219 1219 1219 1219 1219 
+rror = 0.0000116163
+----- R2 -----
+subintervals number: 500,000,000
+elapsed time, ms: 565 564 564 564 564 565 564 564 564 564 
+rror = 0.0000116163
+----- T0 -----
+subintervals number: 500,000,000
+elapsed time, ms: 711 711 711 711 711 711 711 711 711 711 
+rror = 0.0000091163
+----- T1 -----
+subintervals number: 500,000,000
+elapsed time, ms: 1219 1219 1219 1219 1219 1219 1219 1219 1219 1219 
+rror = 0.0000091163
+----- T2 -----
+subintervals number: 500,000,000
+elapsed time, ms: 712 711 711 711 711 712 711 711 711 711 
+rror = 0.0000091163
+----- M0 -----
+subintervals number: 500,000,000
+elapsed time, ms: 17183 17185 17186 17186 17186 17190 17188 17186 17183 17182 
+rror = 0.0594583340
+----- M1 -----
+subintervals number: 500,000,000
+elapsed time, ms: 16463 16463 16462 16466 16465 16467 16461 16464 16462 16464 
+rror = 0.0558683351
+----- M2 -----
+subintervals number: 500,000,000
+elapsed time, ms: 16976 16972 16977 16973 16978 16976 16974 17004 16974 16975 
+rror = 0.0635266677
+----- Finish Fri Jan 5 11:55:30 AM EET 2024
